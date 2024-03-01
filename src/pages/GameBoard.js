@@ -1,7 +1,9 @@
 function GameBoard() {
     return (
-        <div>
-            
+        <div className="container">
+            <div className="board">
+
+            </div>
         </div>
     )
 }
