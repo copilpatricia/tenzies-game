@@ -31,30 +31,31 @@ body {
 
 .container-die {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-content: center;
-  height: 50%;
+  justify-content: center;
+  gap: 50px;
+  height: 100%;
 
 
 }
 
-.cont-one {
+.cont-one, .cont-two{
   display: flex;
   justify-content: center;
-  align-content: center;
-  
-  
-
+  gap: 50px;
 }
 
-.cont-two {
-  display: flex;
-  justify-content: center;
-  align-content: center;
- 
-  
- 
+.cont-one h2, .cont-two h2 {
+  border: 3px solid grey;
+  border-radius: 15%;
+  width: 45px;
+  height: 35px;
+  text-align: center;
+  background-color: rgb(248, 206, 101);
 }
+
+
 
 
 

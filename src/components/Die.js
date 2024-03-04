@@ -15,7 +15,6 @@ function Die(props) {
                 <h2>1</h2>
                 <h2>1</h2>
             </div>
-
         </div>
     )
 }
