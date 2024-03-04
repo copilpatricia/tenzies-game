@@ -27,3 +27,34 @@ body {
   border-radius : 5%;
 }
 
+/* Die Component styling */
+
+.container-die {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 50%;
+
+
+}
+
+.cont-one {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  
+  
+
+}
+
+.cont-two {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+ 
+  
+ 
+}
+
+
+
