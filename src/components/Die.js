@@ -1,22 +1,9 @@
 function Die(props) {
-    return (
-        <div className="container-die">
-            <div className="cont-one">
-                <h2>1</h2>
-                <h2>1</h2>
-                <h2>1</h2>
-                <h2>1</h2>
-                <h2>1</h2>
-            </div>
-            <div className="cont-two">
-                <h2>1</h2>
-                <h2>1</h2>
-                <h2>1</h2>
-                <h2>1</h2>
-                <h2>1</h2>
-            </div>
-        </div>
-    )
+  return (
+    <div>
+      <h2>{props.value}</h2>
+    </div>
+  );
 }
 
 export default Die;
