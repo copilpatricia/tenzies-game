@@ -15,8 +15,6 @@ body {
   align-items: center;
   height: 100vh;
   padding: 13px;
-
-  
 }
 
 .board {
@@ -36,8 +34,6 @@ body {
   justify-content: center;
   gap: 50px;
   height: 100%;
-
-
 }
 
 .cont-one, .cont-two{
@@ -49,10 +45,15 @@ body {
 .cont-one h2, .cont-two h2 {
   border: 3px solid grey;
   border-radius: 15%;
-  width: 45px;
-  height: 35px;
+  width: 48px;
+  height: 38px;
   text-align: center;
   background-color: rgb(248, 206, 101);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.num {
+  font-size: 28px;
 }
 
 

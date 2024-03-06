@@ -1,7 +1,7 @@
 function Die(props) {
   return (
     <div>
-      <h2>{props.value}</h2>
+      <h2 className="num">{props.value}</h2>
     </div>
   );
 }
