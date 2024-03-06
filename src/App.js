@@ -1,6 +1,11 @@
 import Die from "./components/Die";
+import {useState} from "react";
 
 function App() {
+  const [dice, setDice] = useState(allNewDice());
+  const valueDice = dice.map((num) => {
+    return <Die value={num} />;
+  });
   function allNewDice() {
     let arr = [];
     for (let i = 0; i < 10; i++) {
@@ -10,25 +15,13 @@ function App() {
     return arr;
   }
   allNewDice();
-  console.log(allNewDice());
 
   return (
     <div className="container">
       <div className="board">
         <div className="container-die">
           <div className="cont-one">
-            <Die value="1" />
-            <Die value="2" />
-            <Die value="3" />
-            <Die value="4" />
-            <Die value="5" />
-          </div>
-          <div className="cont-two">
-            <Die value="6" />
-            <Die value="7" />
-            <Die value="8" />
-            <Die value="9" />
-            <Die value="10" />
+            {valueDice}
           </div>
         </div>
       </div>
@@ -37,3 +30,5 @@ function App() {
 }
 
 export default App;
+
+
