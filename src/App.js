@@ -4,7 +4,7 @@ import {useState} from "react";
 function App() {
   const [dice, setDice] = useState(allNewDice());
   const valueDice = dice.map((num) => {
-    return <Die value={num} />;
+    return <Die value={num}/>;
   });
   function allNewDice() {
     let arr = [];
@@ -20,9 +20,7 @@ function App() {
     <div className="container">
       <div className="board">
         <div className="container-die">
-          <div className="cont-one">
             {valueDice}
-          </div>
         </div>
       </div>
     </div>
