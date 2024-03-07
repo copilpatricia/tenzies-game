@@ -19,7 +19,7 @@ body {
 
 .board {
   width: 550px;
-  height: 500px;
+  height: 600px;
   background-color: white;
   border: 20px solid #30292f;
   border-radius : 5%;
@@ -52,6 +52,19 @@ body {
 
 .num {
   font-size: 28px;
+}
+
+#btn-roll {
+  margin-top: 20px;
+  width: 140px;
+  height: 50px;
+  display: block;
+  margin: 10px auto;
+  color: white;
+  background-color: #e52b2c ;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 
