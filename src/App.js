@@ -17,12 +17,17 @@ function App() {
   }
   allNewDice();
 
+  function toggleRoll() {
+    setDice(allNewDice())
+  }
+
+
   return (
     <div className="container">
       <div className="board">
         <div className="container-die">
             {valueDice}
-        <button id="btn-roll">Roll</button>
+        <button id="btn-roll" onClick={toggleRoll}>Roll</button>
         </div>
       </div>
     </div>
