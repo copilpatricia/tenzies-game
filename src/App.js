@@ -6,19 +6,30 @@ import Die from "./components/Die";
 function App() {
   const [dice, setDice] = useState(allNewDice());
 
+  function getRandomNumbers() {
+    return {
+      value: Math.floor(Math.random() * 7) + 1,
+      isHeld: false,
+      id: nanoid()
+    }
+  }
+
   // generate random number between 1-7
   function allNewDice() {
     let arr = [];
     for (let i = 0; i < 10; i++) {
-      let value = Math.floor(Math.random() * 7) + 1;
-      arr.push({ value: value, isHeld: true, id: nanoid() });
+      arr.push(getRandomNumbers());
     }
     return arr;
   }
  
   // generate new numbers everytime we push the roll button
+  // improve the function - stop the function to roll any die that is being held - and generate new numbers only for those who are not held
   function toggleRoll() {
-    setDice(allNewDice());
+    setDice((prevDice) => 
+    prevDice.map((die) => {
+      return die.isHeld ? die : getRandomNumbers()
+    }));
   }
 
   // update the state of the array using the setDice function
