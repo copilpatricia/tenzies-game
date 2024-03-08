@@ -10,7 +10,7 @@ function App() {
     let arr = [];
     for (let i = 0; i < 10; i++) {
       let value = Math.floor(Math.random() * 7) + 1;
-      arr.push({ value: value, isHeld: false, id: nanoid() });
+      arr.push({ value: value, isHeld: true, id: nanoid() });
     }
     return arr;
   }
