@@ -1,8 +1,9 @@
 function Die(props) {
+    let color = props.isHeld ? "#8eb1c7" : "rgb(234, 200, 114)"
   return (
-    <>
-      <h2 className="num">{props.value}</h2>
-    </>
+    <div onClick={props.handleDice} >
+      <h2 className="num" style={{backgroundColor: color}}  >{props.value}</h2>
+    </div>
   );
 }
 
