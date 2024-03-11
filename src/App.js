@@ -5,6 +5,9 @@ import Die from "./components/Die";
 
 function App() {
   const [dice, setDice] = useState(allNewDice());
+ 
+  // add a new state called tenzies which represents if the user has won the game or not
+  const [tenzies, setTenzies] = useState(false)
 
   function getRandomNumbers() {
     return {

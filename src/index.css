@@ -52,13 +52,14 @@ body {
 
 #btn-roll {
   margin-top: 20px;
-  width: 140px;
+  width: 100px;
   height: 50px;
   display: block;
   margin: 10px auto;
   color: white;
   background-color: #e52b2c ;
   border: none;
+  border-radius: 6px;
   font-size: 20px;
   cursor: pointer;
 }
