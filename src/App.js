@@ -86,6 +86,9 @@ function App() {
   });
 
   return (
+    <>
+    <h1 id="main-title">Tenzies</h1>
+    <p id="main-p">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
     <div className="container">
       {tenzies && <Confetti />}
       <div className="board">
@@ -97,6 +100,7 @@ function App() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

@@ -6,14 +6,27 @@
 
 body {
   background-color: #8eb1c7;
+  font-family: "Play", sans-serif;
   
+}
+
+#main-title {
+  text-align: center;
+  margin: 10px;
+  font-size: 35px;
+}
+
+#main-p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 32px;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   padding: 6px;
 }
 
@@ -52,7 +65,7 @@ body {
 
 #btn-roll {
   margin-top: 20px;
-  width: 100px;
+  width: 120px;
   height: 50px;
   display: block;
   margin: 10px auto;

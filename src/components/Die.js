@@ -5,6 +5,7 @@ function Die(props) {
   return (
     // pass a function to the child component using props
     <div onClick={props.handleDice} >
+      
       <h2 className="num" style={{backgroundColor: color}}>{props.value}</h2>
     </div>
   );
