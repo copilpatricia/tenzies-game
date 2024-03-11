@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 //generate a random id
 import { nanoid } from "nanoid";
 import Die from "./components/Die";
+// create conffeti effect
+import Confetti from 'react-confetti'
 
 function App() {
   const [dice, setDice] = useState(allNewDice());
@@ -79,6 +81,7 @@ function App() {
 
   return (
     <div className="container">
+      {tenzies && <Confetti />}
       <div className="board">
         <div className="container-die">
           {valueDice}
