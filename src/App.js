@@ -44,11 +44,17 @@ function App() {
  
   // generate new numbers everytime we push the roll button
   // improve the function - stop the function to roll any die that is being held - and generate new numbers only for those who are not held
+  // if the game is not over yet (!tenzies) - roll the dice, otherwise (if the game is over) - setTenzies to false and generate new numbers to play again
   function toggleRoll() {
-    setDice((prevDice) => 
-    prevDice.map((die) => {
-      return die.isHeld ? die : getRandomNumbers()
-    }));
+    if(!tenzies) {
+      setDice((prevDice) => 
+      prevDice.map((die) => {
+        return die.isHeld ? die : getRandomNumbers()
+      }));
+    } else {
+      setTenzies(tenzies => !tenzies);
+      setDice(allNewDice())
+    }
   }
 
   // update the state of the array using the setDice function
