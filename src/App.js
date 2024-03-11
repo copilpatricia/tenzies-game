@@ -83,7 +83,7 @@ function App() {
         <div className="container-die">
           {valueDice}
           <button id="btn-roll" onClick={toggleRoll}>
-            Roll
+            {tenzies ? "New game" : "Roll"}
           </button>
         </div>
       </div>
