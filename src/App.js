@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 //generate a random id
 import { nanoid } from "nanoid";
 import Die from "./components/Die";
@@ -8,6 +8,20 @@ function App() {
  
   // add a new state called tenzies which represents if the user has won the game or not
   const [tenzies, setTenzies] = useState(false)
+  
+  // add an effect that checks if the dice have the same value / are held  => change the tenzies state
+  //.every() method - will look for a specific contion - if every item in the array returns true from the condition => .every() method will return true
+  // to check if they have the same value - take a reference(the first item in the array) and check if the rest of dice have the same value as the reference
+  useEffect(function() {
+   const allHeld = dice.every(die => die.isHeld === true)
+   const firstValue = dice[0].value
+   const sameValue = dice.every(die => die.value === firstValue)
+
+   if(allHeld && sameValue) {
+    setTenzies(tenzies => !tenzies)
+    console.log("You won!")
+   }
+  }, [dice])
 
   function getRandomNumbers() {
     return {
